@@ -36,10 +36,12 @@ This repository contains my customized configuration files and assets for **Hypr
     Adjust paths if necessary and restart Hyprland or related services to see changes.
 
 Customization
-
+    
     You can edit the configuration files under wallust/templates/ to modify color schemes.
 
     Wallust is used for managing consistent theming — make sure it is installed and properly configured with wallust.toml.
+
+    Specify wallpaper path in hyprpaper.conf
 
     Feel free to adapt the config files to your personal preferences.
 
