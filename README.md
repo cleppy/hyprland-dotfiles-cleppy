@@ -22,8 +22,8 @@ This repository contains my customized configuration files and assets for **Hypr
 1. Clone this repository to your local machine:
 
    ```bash
-   git clone https://github.com/yourusername/hyprland-dotfiles.git
-   cd hyprland-dotfiles
+   git clone https://github.com/cleppy/hyprland-dotfiles-cleppy.git
+   cd hyprland-dotfiles-cleppy
 
     Copy or symlink configuration files to your Hyprland config directory (~/.config/hypr/), Waybar, Hyprlock, etc., depending on your setup:
 
