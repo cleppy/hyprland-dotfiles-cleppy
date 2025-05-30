@@ -2,36 +2,6 @@
 
 This repository contains my customized configuration files and assets for **Hyprland**, **Hyprlock**, **Waybar**, and related tools, designed to provide a polished and cohesive Linux desktop experience.
 
----
-
-## Repository Structure
-
-.
-├── cleppy-hyprland-preview.png # Preview screenshot of the Hyprland setup
-├── hypr
-│   ├── hyprland.conf # Main Hyprland config file
-│   └── hyprpaper.conf # Wallpaper manager config for Hyprland
-├── hyprlock
-│   ├── assets # Assets used by Hyprlock (lock screen)
-│   └── hyprlock.conf # Hyprlock configuration file
-├── purple.png # Additional image asset
-├── wallust
-│   ├── templates # Templates for color schemes and theming
-│   │   ├── colors-cava
-│   │   ├── colors-hyprland.conf
-│   │   ├── colors-kitty.conf
-│   │   ├── colors-rofi.rasi
-│   │   ├── colors-swaync.css
-│   │   ├── colors-waybar.css
-│   │   └── templates # Nested template folder (duplicates theming files)
-│   └── wallust.toml # Wallust configuration file
-└── waybar
-├── config # Waybar configuration
-└── style.css # Waybar styling (CSS)
-
-
----
-
 ## What is Included?
 
 - **Hyprland**: Custom configuration for the Hyprland compositor, including window management and wallpaper settings.
