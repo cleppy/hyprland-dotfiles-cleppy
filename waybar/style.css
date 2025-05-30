@@ -1,0 +1,110 @@
+/* Genel font ayarları */
+* {
+  font-family: "JetBrains Mono Nerd Font";
+  font-weight: bold;
+  font-size: 95%;
+  font-feature-settings: '"zero", "ss01", "ss02", "ss03", "ss04", "ss05", "cv31"';
+  min-height: 0;
+}
+
+/* Ana bar stili */
+window#waybar {
+  background: rgba(30, 30, 30, 0.3);
+  border-radius: 50px;
+  color: whitesmoke;
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Gizli bar */
+window#waybar.hidden {
+  opacity: 0.5;
+}
+
+/* Tooltip stili */
+tooltip {
+  background: rgba(30, 30, 46, 0.8);
+  border-radius: 10px;
+  border: 2px solid rgba(17, 17, 27, 0.6);
+  color: pink;
+  -webkit-backdrop-filter: blur(6px);
+}
+
+/* Modüllerin konteynerleri */
+.modules-left,
+.modules-center,
+.modules-right {
+  background-color: rgba(33, 33, 33, 0.5);
+  border-radius: 50px;
+  padding: 2px 8px;
+}
+
+/* Workspace butonları */
+#workspaces button {
+  color: rgba(255, 182, 193, 0.85);
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+  text-shadow: none;
+  padding: 4px 10px;
+  margin: 0 4px;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: 
+    background-color 0.3s ease, 
+    color 0.3s ease,
+    transform 0.2s ease;
+}
+
+#workspaces button.active {
+  color: #fff;
+  background: linear-gradient(135deg, #a121cf, #5a0e95);
+  box-shadow: 0 0 8px rgba(161, 33, 207, 0.7);
+  padding: 4px 14px;
+  border-radius: 18px;
+  transition: 
+    background-color 0.25s ease, 
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+#workspaces button:hover:not(.active) {
+  color: #a121cf;
+  background-color: rgba(161, 33, 207, 0.15);
+  border-radius: 15px;
+  padding: 4px 12px;
+  transition: all 0.25s ease;
+}
+
+/* Klavye durumu modülü */
+#keyboard-state {
+  color: whitesmoke;
+  font-weight: bold;
+  margin: 0 10px;
+}
+
+/* Tüm modüller için genel yazı rengi ve padding */
+#workspaces,
+#custom-vpn,
+#custom-weather,
+#battery,
+#keyboard-state,
+#clock,
+#network,
+#cpu,
+#memory,
+#pulseaudio,
+#notifications,
+#weather,
+#vpn,
+#custom-poweroff{
+  color: whitesmoke;
+  padding: 0px 10px;
+  font-size: 14px;
+}
+#custom-nowplaying {
+  color: rgba(161, 33, 207, 1);
+  font-weight: bold;
+  font-size: 12px;
+}

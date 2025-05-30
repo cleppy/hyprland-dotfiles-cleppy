@@ -1,0 +1,106 @@
+{
+  "layer": "top",
+  "position": "top",
+  "height": 30,
+
+  "modules-left": ["hyprland/workspaces", "hyprland/window"],
+  "modules-center": ["custom/nowplaying", "clock"],
+  "modules-right": ["custom/vpn", "custom/notifications", "custom/weather",  "network", "cpu", "memory", "pulseaudio", "battery", "custom/custom-poweroff"],
+
+  "hyprland/workspaces": {
+    "format": "{icon}",
+    "on-click": "activate",
+    "persistent_workspaces": [1, 2, 3, 4, 5],
+    "format-icons": {
+      "1": "",
+      "2": "",
+      "3": "",
+      "4": "",
+      "5": ""
+    }
+  },
+
+  "hyprland/window": {
+    "format": "{}",
+    "max-length": 50
+  },
+
+  "clock": {
+    "format": "{:%m/%d   %H:%M}",
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt>{calendar}</tt>"
+  },
+
+  "network": {
+    "format-wifi": "🌐",
+    "format-ethernet": "🔌",
+    "format-disconnected": "❌"
+  },
+
+  "cpu": {
+    "format": "【{usage}%】"
+  },
+
+  "memory": {
+    "format": "【{}%】"
+  },
+
+  "pulseaudio": {
+    "format": "{volume}% {icon}",
+    "format-muted": "🔇 Muted",
+    "format-icons": {
+      "default": ["🔈", "🔉", "🔊"]
+    },
+    "on-click": "pactl list short sinks | cut -f2 | wofi --dmenu --prompt='Choose Sound Output' | xargs -r pactl set-default-sink"
+  },
+
+  "custom/custom-poweroff": {
+    "format": "  {icon}  ",
+    "on-click": "wlogout",
+    "tooltip": "Shutdown",
+    "format-icons": {
+      "default": ["💗ᄃﾚ乇ｱｱﾘ💗"]
+    }
+  },
+
+  "custom/notifications": {
+  "format": "📜",
+  "exec": "if makoctl list | grep -q .; then echo '📜'; else echo '🚫'; fi",
+  "interval": 3,
+  "on-click": "makoctl dismiss",
+  "on-click-right": "makoctl dismiss --all"
+  },
+
+
+  "custom/nowplaying": {
+  "format": "🎶 {}",
+  "exec": "playerctl metadata --format '{{artist}} - {{title}}'",
+  "interval": 5,
+  "exec-if": "playerctl status &> /dev/null",
+  "on-click": "playerctl play-pause",
+  "on-scroll-up": "playerctl next",
+  "on-scroll-down": "playerctl previous"
+  },
+
+  "custom/vpn": {
+  "format": "₍^. .^₎⟆",
+  "exec": "nmcli -t connection show --active | grep vpn || echo '^~^'",
+  "return-type": "empty",
+  "interval": 10,
+  "tooltip": false
+  },
+
+
+  "custom/weather": {
+  "exec": "curl -s 'wttr.in/Istanbul?format=1'",
+  "interval": 1800,
+  "tooltip": false
+  },
+
+
+  "battery": {
+  "format": "{capacity}% {icon}",
+  "format-charging": "{capacity}% ⚡",
+  "format-icons": ["", "", "", "", ""],
+  "interval": 30
+  }
+}
