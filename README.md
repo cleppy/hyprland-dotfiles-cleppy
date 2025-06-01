@@ -47,6 +47,8 @@ Customization
 
 Requirements
 
+    Highly recommended to use "https://github.com/rmaake1/terminal-rain-lightning" this repo with scripts.
+    
     Hyprland compositor
 
     Hyprlock for locking screen
