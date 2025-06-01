@@ -57,3 +57,6 @@ Requirements
 
     Wallust for theming (optional but recommended)
 
+License
+
+   Distributed under the MIT License. See LICENSE file for more information. Do whatever you want with this script.
